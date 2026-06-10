@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -118,7 +120,16 @@ a {
 
 @media (max-width: 640px) {
   .section-space {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+
+  .contact-link {
+    min-height: 7.5rem;
+    padding: 1.5rem;
+  }
+
+  .contact-link span:last-child {
+    font-size: 0.75rem;
   }
 }

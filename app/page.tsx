@@ -73,7 +73,7 @@ const ritualItems = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#f6f0e7] text-[#201b15]">
+    <main className="min-h-screen overflow-x-hidden bg-[#f6f0e7] text-[#201b15]">
       <section className="relative min-h-[100svh] overflow-hidden">
         <Image
           src="/images/hero/master-with-venik.jpg"
@@ -81,13 +81,13 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="scale-[1.02] object-cover"
+          className="scale-[1.02] object-cover object-[52%_42%]"
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(18,14,10,.88)_0%,rgba(18,14,10,.66)_42%,rgba(18,14,10,.34)_76%,rgba(18,14,10,.18)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_48%,rgba(246,240,231,.10),rgba(18,14,10,0)_36%)]" />
         <div className="absolute inset-x-0 bottom-0 h-52 bg-[linear-gradient(0deg,#f6f0e7,rgba(246,240,231,0))]" />
 
-        <header className="relative z-10 mx-auto flex w-full max-w-[1520px] items-center justify-between px-6 py-8 text-[#faf4ea] sm:px-10 lg:px-20 lg:py-12">
+        <header className="relative z-10 mx-auto flex w-full max-w-[1520px] items-center justify-between px-5 py-5 text-[#faf4ea] sm:px-10 sm:py-8 lg:px-20 lg:py-12">
           <a href="#top" className="text-xs uppercase">
             Банное Бюро
           </a>
@@ -109,7 +109,7 @@ export default function Home() {
 
         <div
           id="top"
-          className="relative z-10 mx-auto flex min-h-[calc(100svh-112px)] w-full max-w-[1520px] items-start px-6 pt-20 pb-24 sm:px-10 sm:pt-28 sm:pb-28 lg:px-20 lg:pt-36 lg:pb-36"
+          className="relative z-10 mx-auto flex min-h-[calc(100svh-76px)] w-full max-w-[1520px] items-start px-5 pt-14 pb-20 sm:min-h-[calc(100svh-112px)] sm:px-10 sm:pt-28 sm:pb-28 lg:px-20 lg:pt-36 lg:pb-36"
         >
           <div className="reveal max-w-5xl text-[#fbf6ee]">
             <p className="mb-9 text-xs uppercase text-[#d8c7ae]">
@@ -118,7 +118,7 @@ export default function Home() {
             <h1 className="font-display text-[clamp(2.6rem,6.8vw,6.8rem)] font-normal leading-[0.9]">
               Банное Бюро
             </h1>
-            <p className="mt-12 max-w-4xl font-display text-[clamp(3.2rem,7vw,8rem)] font-normal leading-[0.92] text-[#f6ecde]">
+            <p className="mt-10 max-w-4xl font-display text-[clamp(2.55rem,11vw,7rem)] font-normal leading-[0.96] text-[#f6ecde] sm:mt-12">
               С чем вы пришли сегодня?
             </p>
             <p className="mt-10 max-w-2xl text-lg leading-8 text-[#eadfce] sm:text-xl sm:leading-9">
@@ -147,7 +147,7 @@ export default function Home() {
         className="section-space px-6 sm:px-10 lg:px-20"
       >
         <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-          <div className="reveal relative min-h-[420px] overflow-hidden border border-[#d3c4ae] sm:min-h-[560px]">
+          <div className="reveal relative min-h-[320px] overflow-hidden border border-[#d3c4ae] sm:min-h-[500px] lg:min-h-[560px]">
             <Image
               src="/images/philosophy/restoration.jpg"
               alt="Восстановление и отдых после банного ритуала"
@@ -279,7 +279,7 @@ export default function Home() {
                 className="reveal overflow-hidden border border-[#d3c4ae] bg-[#fbf6ee]/72 transition duration-500 hover:bg-[#fbf6ee]"
               >
                 {master.image ? (
-                  <div className="relative h-[420px] overflow-hidden border-b border-[#d3c4ae]">
+                  <div className="relative h-[360px] overflow-hidden border-b border-[#d3c4ae] sm:h-[420px]">
                     <Image
                       src={master.image}
                       alt={master.name}
@@ -289,7 +289,7 @@ export default function Home() {
                     />
                   </div>
                 ) : (
-                  <div className="flex h-[420px] items-end border-b border-[#d3c4ae] bg-[#e2d5c3] p-8">
+                  <div className="flex h-[360px] items-end border-b border-[#d3c4ae] bg-[#e2d5c3] p-8 sm:h-[420px]">
                     <p className="max-w-xs text-base leading-7 text-[#5b5044]">
                       Фото будет добавлено позже
                     </p>
@@ -314,7 +314,7 @@ export default function Home() {
 
       <section className="bg-[#211c16] px-6 py-28 text-[#f7efe4] sm:px-10 lg:px-20 lg:py-44">
         <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div className="reveal relative min-h-[420px] overflow-hidden border border-[#3a3026] sm:min-h-[560px]">
+          <div className="reveal relative min-h-[320px] overflow-hidden border border-[#3a3026] sm:min-h-[500px] lg:min-h-[560px]">
             <Image
               src="/images/privacy/terrace-samovar.jpg"
               alt="Терраса и самовар в приватном пространстве Банного Бюро"
@@ -347,7 +347,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px]">
           <div className="reveal overflow-hidden border border-[#c8b8a0] bg-[#f6f0e7]/55">
             <div className="grid lg:grid-cols-[0.95fr_1.05fr]">
-              <div className="relative min-h-[360px] lg:min-h-[620px]">
+              <div className="relative min-h-[300px] sm:min-h-[420px] lg:min-h-[620px]">
                 <Image
                   src="/images/contact/firepit.jpg"
                   alt="Огонь и спокойное место для завершения банного дня"
