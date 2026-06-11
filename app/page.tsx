@@ -1,4 +1,5 @@
-import Image from "next/image";
+﻿import Image from "next/image";
+import Gallery from "./Gallery";
 
 const ritualSteps = [
   {
@@ -71,6 +72,25 @@ const ritualItems = [
   },
 ];
 
+const formatItems = [
+  {
+    title: "Восстановление",
+    text: "Возвращение ресурса, отдыха и внутреннего баланса.",
+  },
+  {
+    title: "Особые даты",
+    text: "Дни рождения, семейные встречи и значимые события.",
+  },
+  {
+    title: "Близкие люди",
+    text: "Время вместе без спешки и отвлекающего шума.",
+  },
+  {
+    title: "Специальные проекты",
+    text: "Частные мероприятия, ретриты и корпоративные программы.",
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f6f0e7] text-[#201b15]">
@@ -91,12 +111,15 @@ export default function Home() {
           <a href="#top" className="text-xs uppercase">
             Банное Бюро
           </a>
-          <nav className="hidden items-center gap-8 text-xs uppercase text-[#eadfce]/80 lg:flex">
+          <nav className="hidden items-center gap-8 text-xs uppercase text-[#fbf6ee]/90 lg:flex">
             <a href="#philosophy" className="transition hover:text-white">
               Философия
             </a>
-            <a href="#ritual" className="transition hover:text-white">
-              Ритуал
+            <a href="#format" className="transition hover:text-white">
+              Формат работы
+            </a>
+            <a href="#gallery" className="transition hover:text-white">
+              Галерея
             </a>
             <a href="#team" className="transition hover:text-white">
               Команда
@@ -125,12 +148,6 @@ export default function Home() {
               Мы подбираем ритуал и команду мастеров под состояние человека.
             </p>
             <div className="mt-12 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#ritual"
-                className="inline-flex h-14 items-center justify-center border border-[#fbf6ee]/75 bg-[#fbf6ee] px-8 text-xs uppercase text-[#201b15] transition duration-500 hover:border-[#d8c7ae] hover:bg-[#d8c7ae]"
-              >
-                Подобрать ритуал
-              </a>
               <a
                 href="#contacts"
                 className="inline-flex h-14 items-center justify-center border border-[#fbf6ee]/55 px-8 text-xs uppercase text-[#fbf6ee] transition duration-500 hover:bg-[#fbf6ee] hover:text-[#201b15]"
@@ -264,6 +281,91 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="format" className="section-space px-6 sm:px-10 lg:px-20">
+        <div className="mx-auto max-w-[1320px]">
+          <div className="grid gap-20 lg:grid-cols-[0.72fr_1.28fr]">
+            <p className="eyebrow reveal">Формат работы</p>
+            <div className="reveal max-w-3xl">
+              <h2 className="font-display text-[clamp(2.35rem,4vw,4.6rem)] font-normal leading-[1.04]">
+                Формат работы
+              </h2>
+              <div className="mt-12 space-y-6 text-xl leading-9 text-[#5b5044]">
+                <p>
+                  Команда Банного Бюро базируется в Москве и работает с
+                  частными и корпоративными проектами по всей России и за её
+                  пределами.
+                </p>
+                <p>
+                  Мы выезжаем в частные дома, загородные резиденции, ретриты,
+                  гостиницы и специальные проекты.
+                </p>
+                <p>Каждый ритуал начинается с вопроса:</p>
+                <p className="font-display text-3xl leading-tight text-[#201b15]">
+                  «С чем вы пришли сегодня?»
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-20 grid gap-20 lg:grid-cols-[0.72fr_1.28fr]">
+            <div />
+            <div className="reveal max-w-3xl space-y-6 text-xl leading-9 text-[#5b5044]">
+              <p>
+                Кому-то необходимо восстановление после напряжённого периода.
+              </p>
+              <p>Кто-то собирает близких на особенную дату.</p>
+              <p>
+                Кто-то ищет время для разговора, тишины или перезагрузки.
+              </p>
+              <p>Мы не работаем по фиксированному сценарию.</p>
+              <p>
+                Формат ритуала, состав команды, продолжительность и наполнение
+                всегда определяются запросом человека и задачей встречи.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-20 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {formatItems.map((item) => (
+              <article
+                key={item.title}
+                className="reveal min-h-72 border border-[#d3c4ae] bg-[#fbf6ee]/72 p-8 transition duration-500 hover:bg-[#fbf6ee]"
+              >
+                <h3 className="font-display text-4xl font-normal leading-tight">
+                  {item.title}
+                </h3>
+                <p className="mt-12 text-base leading-7 text-[#5b5044]">
+                  {item.text}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <div className="reveal mt-20 border-y border-[#d3c4ae] py-14">
+            <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
+              <p className="eyebrow">Стоимость</p>
+              <div className="max-w-3xl space-y-6 text-xl leading-9 text-[#5b5044]">
+                <p>Мы не работаем по фиксированному меню услуг.</p>
+                <p>
+                  Формат ритуала, состав команды и продолжительность
+                  подбираются индивидуально.
+                </p>
+                <p>
+                  Для предварительной оценки достаточно рассказать, с чем вы
+                  пришли сегодня и где планируется проведение ритуала.
+                </p>
+                <p className="pt-6 font-display text-3xl leading-tight text-[#201b15]">
+                  Большинство проектов начинается с короткого разговора и
+                  знакомства.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Gallery />
+
       <section id="team" className="section-space px-6 sm:px-10 lg:px-20">
         <div className="mx-auto max-w-[1320px]">
           <div className="grid gap-20 lg:grid-cols-[0.72fr_1.28fr]">
@@ -311,6 +413,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
       <section className="bg-[#211c16] px-6 py-28 text-[#f7efe4] sm:px-10 lg:px-20 lg:py-44">
         <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
