@@ -222,33 +222,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 pb-32 sm:px-10 lg:px-20 lg:pb-52">
-        <div className="reveal mx-auto max-w-[1320px] border-y border-[#d3c4ae] py-24 sm:py-32 lg:py-40">
-          <div className="grid gap-20 lg:grid-cols-[0.72fr_1.28fr]">
-            <p className="eyebrow">Состояние</p>
-            <div className="max-w-3xl">
-              <h2 className="font-display text-[clamp(2.25rem,3.7vw,4.2rem)] font-normal leading-[1.07]">
-                Мы работаем не с телом. Мы работаем с состоянием.
-              </h2>
-              <div className="mt-12 grid gap-3 sm:grid-cols-4">
-                {["Жар", "Тишина", "Разговор", "Покой"].map((item) => (
-                  <div
-                    key={item}
-                    className="border-t border-[#cfc0aa] pt-5 font-display text-3xl leading-tight"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-              <p className="mt-12 max-w-3xl text-xl leading-9 text-[#5b5044]">
-                Мы собираем ритуал вокруг человека, а не человека вокруг
-                процедуры.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section
         id="ritual"
         className="bg-[#211c16] px-6 py-32 text-[#f7efe4] sm:px-10 lg:px-20 lg:py-52"
