@@ -1,47 +1,24 @@
 ﻿import Image from "next/image";
 import Gallery from "./Gallery";
 
-const ritualSteps = [
-  {
-    number: "01",
-    title: "Состояние",
-    text: "Начинаем с вопроса и тишины.",
-  },
-  {
-    number: "02",
-    title: "Сценарий",
-    text: "Подбираем пар, воду, травы и ритм.",
-  },
-  {
-    number: "03",
-    title: "Ритуал",
-    text: "Ведём день мягко и внимательно.",
-  },
-  {
-    number: "04",
-    title: "Возвращение",
-    text: "Оставляем пространство для покоя.",
-  },
-];
-
 const masters = [
   {
     name: "Дмитрий Широков",
     role: "Мастер восстановления",
     image: "/images/team/dmitry.jpg",
-    text: "Ведёт гостя к состоянию покоя, внутренней тишины и восстановления сил.",
+    text: "Более 20 лет практики. Работал в Баня Ленд, Спа Дзен и Бритиш Баня. Специализация — глубокое восстановление, авторские техники парения и массажные практики.",
   },
   {
     name: "Александр Михель",
     role: "Архитектор ритуала",
     image: "/images/team/alexander.jpg",
-    text: "Создаёт цельное банное действие, где пар, аромат и тепло складываются в персональный обряд.",
+    text: "Более 15 лет практики. Работал в Баня Ленд, Спа Дзен и Бритиш Баня. Специализация — авторские банные ритуалы, индивидуальные программы восстановления и сопровождение гостей премиального уровня.",
   },
   {
     name: "Алексей Аверьянов",
     role: "Проводник состояния",
     image: "/images/team/alexey.jpg",
-    text: "Работает с температурой, ритмом и состоянием человека во время пара.",
+    text: "Многолетний опыт банной практики. Авторские техники парения и индивидуальный подход к каждому гостю. Специализация — глубокое восстановление, расслабление и работа с состоянием человека.",
   },
 ];
 
@@ -72,22 +49,14 @@ const ritualItems = [
   },
 ];
 
-const formatItems = [
+const testimonials = [
   {
-    title: "Восстановление",
-    text: "Возвращение ресурса, отдыха и внутреннего баланса.",
+    name: "Вероника",
+    text: "Я и моя семья в полном восторге. Ребята — профессионалы своего дела. Подход нашли к каждому, и все остались довольны, особенно я. Я не очень люблю высокие температуры в парной, но мастера грамотно и внимательно подошли к этому вопросу. В результате — никакого дискомфорта, только удовольствие и полное расслабление. Всем советую. А команде хочется пожелать удачи, успехов и процветания.",
   },
   {
-    title: "Особые даты",
-    text: "Дни рождения, семейные встречи и значимые события.",
-  },
-  {
-    title: "Близкие люди",
-    text: "Время вместе без спешки и отвлекающего шума.",
-  },
-  {
-    title: "Специальные проекты",
-    text: "Частные мероприятия, ретриты и корпоративные программы.",
+    name: "Наталья",
+    text: "Душевное и атмосферное место отдыха для многих поколений коренных москвичей. Чудом сохранившийся уголок старой Москвы, где можно встретить высокий уровень банной культуры, заботу о гостях и настоящее внимание к деталям.",
   },
 ];
 
@@ -101,7 +70,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="scale-[1.02] object-cover object-[52%_42%]"
+          className="scale-[1.02] object-cover object-[center_25%]"
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(18,14,10,.88)_0%,rgba(18,14,10,.66)_42%,rgba(18,14,10,.34)_76%,rgba(18,14,10,.18)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_48%,rgba(246,240,231,.10),rgba(18,14,10,0)_36%)]" />
@@ -114,9 +83,6 @@ export default function Home() {
           <nav className="hidden items-center gap-8 text-xs uppercase text-[#fbf6ee]/90 lg:flex">
             <a href="#philosophy" className="transition hover:text-white">
               Философия
-            </a>
-            <a href="#format" className="transition hover:text-white">
-              Формат работы
             </a>
             <a href="#gallery" className="transition hover:text-white">
               Галерея
@@ -135,17 +101,16 @@ export default function Home() {
           className="relative z-10 mx-auto flex min-h-[calc(100svh-76px)] w-full max-w-[1520px] items-start px-5 pt-14 pb-20 sm:min-h-[calc(100svh-112px)] sm:px-10 sm:pt-28 sm:pb-28 lg:px-20 lg:pt-36 lg:pb-36"
         >
           <div className="reveal max-w-5xl text-[#fbf6ee]">
-            <p className="mb-9 text-xs uppercase text-[#d8c7ae]">
-              Авторские банные ритуалы
-            </p>
             <h1 className="font-display text-[clamp(2.6rem,6.8vw,6.8rem)] font-normal leading-[0.9]">
               Банное Бюро
             </h1>
-            <p className="mt-10 max-w-4xl font-display text-[clamp(2.55rem,11vw,7rem)] font-normal leading-[0.96] text-[#f6ecde] sm:mt-12">
-              С чем вы пришли сегодня?
+            <p className="mt-10 max-w-2xl font-display text-[clamp(1.7rem,4vw,3.5rem)] font-normal leading-[1.05] text-[#f6ecde] sm:mt-12">
+              Банный кейтеринг №1 в России
             </p>
             <p className="mt-10 max-w-2xl text-lg leading-8 text-[#eadfce] sm:text-xl sm:leading-9">
-              Мы подбираем ритуал и команду мастеров под состояние человека.
+              Авторские банные ритуалы
+              <br />
+              для частных гостей, компаний и особых событий
             </p>
             <div className="mt-12 flex flex-col gap-4 sm:flex-row">
               <a
@@ -176,11 +141,38 @@ export default function Home() {
           <div className="reveal max-w-3xl lg:pl-12">
             <p className="eyebrow">Философия Банного Бюро</p>
             <h2 className="mt-10 font-display text-[clamp(2.25rem,3.8vw,4.3rem)] font-normal leading-[1.06]">
-              Не меню процедур. Точная настройка состояния.
+              Банный кейтеринг — это не набор услуг и не готовая программа.
             </h2>
             <p className="mt-12 max-w-2xl text-xl leading-9 text-[#5b5044]">
-              Гость не выбирает мастера. Бюро собирает ритуал, темп и команду
-              под то, с чем человек пришёл сегодня.
+              Это выездной формат, в котором команда мастеров приезжает к вам и
+              создаёт ритуал вокруг конкретного запроса.
+              <br />
+              <br />
+              Восстановление после напряжённого периода.
+              <br />
+              Особенная дата в кругу близких.
+              <br />
+              Встреча друзей.
+              <br />
+              Корпоративное мероприятие.
+              <br />
+              Частный ретрит.
+              <br />
+              <br />
+              Мы работаем в уже существующем пространстве — частной бане,
+              загородной резиденции, гостинице или ретрит-центре.
+              <br />
+              <br />
+              Каждый проект собирается индивидуально: команда мастеров,
+              продолжительность, сценарий и наполнение определяются задачей
+              встречи и ожиданиями гостей.
+              <br />
+              <br />
+              Наша цель — не просто провести парение, а создать запоминающийся
+              опыт, наполненный теплом, вниманием, комфортом и ощущением
+              глубокого восстановления. Именно поэтому многие гости
+              возвращаются к нам снова и снова, доверяя самые важные встречи,
+              праздники и моменты отдыха.
             </p>
           </div>
         </div>
@@ -189,10 +181,32 @@ export default function Home() {
       <section id="included" className="section-space px-6 sm:px-10 lg:px-20">
         <div className="mx-auto max-w-[1320px]">
           <div className="grid gap-20 lg:grid-cols-[0.72fr_1.28fr]">
-            <p className="eyebrow reveal">Что входит в ритуал</p>
-            <h2 className="reveal max-w-3xl font-display text-[clamp(2.35rem,4vw,4.6rem)] font-normal leading-[1.04]">
-              Только необходимое. Всё собрано в цельный день.
-            </h2>
+            <p className="eyebrow reveal">Что входит в наши программы</p>
+            <div className="reveal max-w-3xl">
+              <h2 className="font-display text-[clamp(2.35rem,4vw,4.6rem)] font-normal leading-[1.04]">
+                Что входит в наши программы
+              </h2>
+              <div className="mt-12 space-y-6 text-xl leading-9 text-[#5b5044]">
+                <p>
+                  Банный Кейтеринг №1 — это премиальный сервис выездного банного
+                  обслуживания.
+                </p>
+                <p>
+                  Мы создаём не просто банный сеанс, а полноценный опыт
+                  восстановления, отдыха и общения. Каждая программа собирается
+                  индивидуально и может включать различные элементы в
+                  зависимости от формата встречи, количества гостей и
+                  поставленных задач.
+                </p>
+                <p>
+                  В программу могут входить авторское парение, массажные
+                  практики, SPA-процедуры, ароматерапия, чайные церемонии и
+                  другие элементы банного ритуала. Состав программы всегда
+                  подбирается индивидуально под формат встречи, количество
+                  гостей и ваши пожелания.
+                </p>
+              </div>
+            </div>
           </div>
           <div className="mt-20 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {ritualItems.map((item, index) => (
@@ -222,121 +236,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        id="ritual"
-        className="bg-[#211c16] px-6 py-32 text-[#f7efe4] sm:px-10 lg:px-20 lg:py-52"
-      >
-        <div className="mx-auto max-w-[1320px]">
-          <div className="grid gap-20 lg:grid-cols-[0.72fr_1.28fr]">
-            <p className="eyebrow reveal text-[#bba78b]">
-              Как проходит ритуал
-            </p>
-            <h2 className="reveal max-w-3xl font-display text-[clamp(2.25rem,3.8vw,4.4rem)] font-normal leading-[1.06]">
-              Мягкий путь от первого вопроса к тишине после пара.
-            </h2>
-          </div>
-          <div className="mt-20 grid gap-10 md:grid-cols-2 xl:grid-cols-4">
-            {ritualSteps.map((step) => (
-              <article
-                key={step.number}
-                className="reveal border-t border-[#f7efe4]/18 pt-7"
-              >
-                <p className="text-sm text-[#bba78b]">{step.number}</p>
-                <h3 className="mt-8 font-display text-4xl font-normal leading-tight">
-                  {step.title}
-                </h3>
-                <p className="mt-6 text-base leading-7 text-[#d7c8b5]">
-                  {step.text}
-                </p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="format" className="section-space px-6 sm:px-10 lg:px-20">
-        <div className="mx-auto max-w-[1320px]">
-          <div className="grid gap-20 lg:grid-cols-[0.72fr_1.28fr]">
-            <p className="eyebrow reveal">Формат работы</p>
-            <div className="reveal max-w-3xl">
-              <h2 className="font-display text-[clamp(2.35rem,4vw,4.6rem)] font-normal leading-[1.04]">
-                Формат работы
-              </h2>
-              <div className="mt-12 space-y-6 text-xl leading-9 text-[#5b5044]">
-                <p>
-                  Команда Банного Бюро базируется в Москве и работает с
-                  частными и корпоративными проектами по всей России и за её
-                  пределами.
-                </p>
-                <p>
-                  Мы выезжаем в частные дома, загородные резиденции, ретриты,
-                  гостиницы и специальные проекты.
-                </p>
-                <p>Каждый ритуал начинается с вопроса:</p>
-                <p className="font-display text-3xl leading-tight text-[#201b15]">
-                  «С чем вы пришли сегодня?»
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-20 grid gap-20 lg:grid-cols-[0.72fr_1.28fr]">
-            <div />
-            <div className="reveal max-w-3xl space-y-6 text-xl leading-9 text-[#5b5044]">
-              <p>
-                Кому-то необходимо восстановление после напряжённого периода.
-              </p>
-              <p>Кто-то собирает близких на особенную дату.</p>
-              <p>
-                Кто-то ищет время для разговора, тишины или перезагрузки.
-              </p>
-              <p>Мы не работаем по фиксированному сценарию.</p>
-              <p>
-                Формат ритуала, состав команды, продолжительность и наполнение
-                всегда определяются запросом человека и задачей встречи.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-20 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {formatItems.map((item) => (
-              <article
-                key={item.title}
-                className="reveal min-h-72 border border-[#d3c4ae] bg-[#fbf6ee]/72 p-8 transition duration-500 hover:bg-[#fbf6ee]"
-              >
-                <h3 className="font-display text-4xl font-normal leading-tight">
-                  {item.title}
-                </h3>
-                <p className="mt-12 text-base leading-7 text-[#5b5044]">
-                  {item.text}
-                </p>
-              </article>
-            ))}
-          </div>
-
-          <div className="reveal mt-20 border-y border-[#d3c4ae] py-14">
-            <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr]">
-              <p className="eyebrow">Стоимость</p>
-              <div className="max-w-3xl space-y-6 text-xl leading-9 text-[#5b5044]">
-                <p>Мы не работаем по фиксированному меню услуг.</p>
-                <p>
-                  Формат ритуала, состав команды и продолжительность
-                  подбираются индивидуально.
-                </p>
-                <p>
-                  Для предварительной оценки достаточно рассказать, с чем вы
-                  пришли сегодня и где планируется проведение ритуала.
-                </p>
-                <p className="pt-6 font-display text-3xl leading-tight text-[#201b15]">
-                  Большинство проектов начинается с короткого разговора и
-                  знакомства.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Gallery />
 
       <section id="team" className="section-space px-6 sm:px-10 lg:px-20">
@@ -344,7 +243,11 @@ export default function Home() {
           <div className="grid gap-20 lg:grid-cols-[0.72fr_1.28fr]">
             <p className="eyebrow reveal">Команда мастеров</p>
             <h2 className="reveal max-w-3xl font-display text-[clamp(2.35rem,4vw,4.6rem)] font-normal leading-[1.04]">
-              Три мастера. Один спокойный ритм.
+              Уникальный опыт.
+              <br />
+              Ощущение гостя.
+              <br />
+              Работа на результат.
             </h2>
           </div>
           <div className="mt-20 grid gap-5 md:grid-cols-3">
@@ -387,6 +290,49 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section-space px-6 sm:px-10 lg:px-20">
+        <div className="mx-auto max-w-[1320px]">
+          <div className="grid gap-20 lg:grid-cols-[0.72fr_1.28fr]">
+            <p className="eyebrow reveal">Отзывы гостей</p>
+            <div className="reveal max-w-3xl">
+              <h2 className="font-display text-[clamp(2.35rem,4vw,4.6rem)] font-normal leading-[1.04]">
+                Отзывы гостей
+              </h2>
+              <p className="mt-12 max-w-2xl text-xl leading-9 text-[#5b5044]">
+                Несколько слов от людей, которые доверили нам свои встречи,
+                праздники и банные ритуалы.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-20 grid gap-5 lg:grid-cols-2">
+            {testimonials.map((testimonial) => (
+              <article
+                key={testimonial.name}
+                className="reveal border border-[#d3c4ae] bg-[#fbf6ee]/72 p-8 transition duration-500 hover:bg-[#fbf6ee] sm:p-10"
+              >
+                <h3 className="font-display text-4xl font-normal leading-tight">
+                  {testimonial.name}
+                </h3>
+                <p className="mt-10 text-base leading-8 text-[#5b5044]">
+                  {testimonial.text}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <div className="reveal mt-14">
+            <a
+              href="https://wa.me/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex h-14 items-center justify-center border border-[#8f7f68] px-8 text-xs uppercase text-[#201b15] transition duration-500 hover:bg-[#201b15] hover:text-[#fbf6ee]"
+            >
+              Оставить отзыв
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section className="bg-[#211c16] px-6 py-28 text-[#f7efe4] sm:px-10 lg:px-20 lg:py-44">
         <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
@@ -436,12 +382,18 @@ export default function Home() {
               <div className="p-8 sm:p-12 lg:p-16">
                 <p className="eyebrow">Контакты</p>
                 <h2 className="mt-10 max-w-xl font-display text-[clamp(2.4rem,4.2vw,4.8rem)] font-normal leading-[1.04]">
-                  Начать разговор
+                  Связаться с нами
                 </h2>
                 <p className="mt-16 max-w-2xl text-2xl leading-10 text-[#3f352b]">
-                  Расскажите, с чем вы пришли сегодня.
+                  Свяжитесь с нами и расскажите о вашем запросе.
                   <br />
-                  Мы предложим формат ритуала и состав команды.
+                  <br />
+                  Мы обсудим формат встречи, количество гостей, особенности
+                  пространства и желаемый сценарий.
+                  <br />
+                  <br />
+                  После этого подготовим предложение и соберём команду мастеров
+                  под вашу задачу.
                 </p>
                 <div className="mt-20 grid gap-4 sm:grid-cols-2">
                   <a
@@ -468,6 +420,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <footer className="bg-[#e4d7c4] px-6 pt-24 pb-12 text-center text-xs leading-6 text-[#8f8376] sm:px-10 lg:px-20">
+        <p>© 2026 Банное Бюро</p>
+        <p className="mt-4">
+          Банный кейтеринг №1 в России.
+          <br />
+          Все права защищены.
+        </p>
+      </footer>
     </main>
   );
 }
