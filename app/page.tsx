@@ -1,5 +1,6 @@
 ﻿import Image from "next/image";
 import Gallery from "./Gallery";
+import MobileNav from "./MobileNav";
 
 const masters = [
   {
@@ -94,6 +95,7 @@ export default function Home() {
               Контакты
             </a>
           </nav>
+          <MobileNav />
         </header>
 
         <div
@@ -338,7 +340,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-space px-6 sm:px-10 lg:px-20">
+      <section
+        id="testimonials"
+        className="section-space px-6 sm:px-10 lg:px-20"
+      >
         <div className="mx-auto max-w-[1320px]">
           <div className="grid gap-20 lg:grid-cols-[0.72fr_1.28fr]">
             <p className="eyebrow reveal">Отзывы гостей</p>
@@ -382,7 +387,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#211c16] px-6 py-28 text-[#f7efe4] sm:px-10 lg:px-20 lg:py-44">
+      <section
+        id="privacy"
+        className="bg-[#211c16] px-6 py-28 text-[#f7efe4] sm:px-10 lg:px-20 lg:py-44"
+      >
         <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="reveal relative min-h-[320px] overflow-hidden border border-[#3a3026] sm:min-h-[500px] lg:min-h-[560px]">
             <Image
