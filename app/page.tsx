@@ -102,7 +102,7 @@ export default function Home() {
           id="top"
           className="relative z-10 mx-auto flex min-h-[calc(100svh-76px)] w-full max-w-[1520px] items-start px-5 pt-14 pb-20 sm:min-h-[calc(100svh-112px)] sm:px-10 sm:pt-28 sm:pb-28 lg:px-20 lg:pt-36 lg:pb-36"
         >
-          <div className="reveal max-w-5xl text-[#fbf6ee]">
+          <div className="hero-content reveal max-w-5xl text-[#fbf6ee]">
             <h1 className="mt-10 max-w-2xl font-display text-[clamp(1.7rem,4vw,3.5rem)] font-normal leading-[1.05] text-[#f6ecde] sm:mt-12">
               Банный кейтеринг №1
             </h1>
