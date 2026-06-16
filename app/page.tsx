@@ -37,7 +37,7 @@ const ritualItems = [
     image: "/images/ritual/plunge.jpg",
   },
   {
-    title: "Чайная церемония",
+    title: "Чайная церемония и ресторанное обслуживание",
     image: "/images/ritual/tea.jpg",
   },
   {
