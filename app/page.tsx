@@ -81,8 +81,8 @@ export default function Home() {
             Банное Бюро
           </a>
           <nav className="hidden items-center gap-8 text-xs uppercase text-[#fbf6ee]/90 lg:flex">
-            <a href="#philosophy" className="transition hover:text-white">
-              Философия
+            <a href="#how-we-work" className="transition hover:text-white">
+              Как мы работаем
             </a>
             <a href="#gallery" className="transition hover:text-white">
               Галерея
@@ -101,16 +101,15 @@ export default function Home() {
           className="relative z-10 mx-auto flex min-h-[calc(100svh-76px)] w-full max-w-[1520px] items-start px-5 pt-14 pb-20 sm:min-h-[calc(100svh-112px)] sm:px-10 sm:pt-28 sm:pb-28 lg:px-20 lg:pt-36 lg:pb-36"
         >
           <div className="reveal max-w-5xl text-[#fbf6ee]">
-            <h1 className="font-display text-[clamp(2.6rem,6.8vw,6.8rem)] font-normal leading-[0.9]">
-              Банное Бюро
+            <h1 className="mt-10 max-w-2xl font-display text-[clamp(1.7rem,4vw,3.5rem)] font-normal leading-[1.05] text-[#f6ecde] sm:mt-12">
+              Банный кейтеринг №1
             </h1>
-            <p className="mt-10 max-w-2xl font-display text-[clamp(1.7rem,4vw,3.5rem)] font-normal leading-[1.05] text-[#f6ecde] sm:mt-12">
-              Банный кейтеринг №1 в России
-            </p>
             <p className="mt-10 max-w-2xl text-lg leading-8 text-[#eadfce] sm:text-xl sm:leading-9">
-              Авторские банные ритуалы
+              Эксклюзивное банное искусство с выездом прямо к вам.
               <br />
-              для частных гостей, компаний и особых событий
+              <br />
+              Персональные банные ритуалы, авторские техники парения, массаж и
+              восстановление.
             </p>
             <div className="mt-12 flex flex-col gap-4 sm:flex-row">
               <a
@@ -125,7 +124,7 @@ export default function Home() {
       </section>
 
       <section
-        id="philosophy"
+        id="how-we-work"
         className="section-space px-6 sm:px-10 lg:px-20"
       >
         <div className="mx-auto grid max-w-[1320px] gap-12 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
@@ -139,41 +138,92 @@ export default function Home() {
             />
           </div>
           <div className="reveal max-w-3xl lg:pl-12">
-            <p className="eyebrow">Философия Банного Бюро</p>
-            <h2 className="mt-10 font-display text-[clamp(2.25rem,3.8vw,4.3rem)] font-normal leading-[1.06]">
-              Банный кейтеринг — это не набор услуг и не готовая программа.
-            </h2>
-            <p className="mt-12 max-w-2xl text-xl leading-9 text-[#5b5044]">
-              Это выездной формат, в котором команда мастеров приезжает к вам и
-              создаёт ритуал вокруг конкретного запроса.
-              <br />
-              <br />
-              Восстановление после напряжённого периода.
-              <br />
-              Особенная дата в кругу близких.
-              <br />
-              Встреча друзей.
-              <br />
-              Корпоративное мероприятие.
-              <br />
-              Частный ретрит.
-              <br />
-              <br />
-              Мы работаем в уже существующем пространстве — частной бане,
-              загородной резиденции, гостинице или ретрит-центре.
-              <br />
-              <br />
-              Каждый проект собирается индивидуально: команда мастеров,
-              продолжительность, сценарий и наполнение определяются задачей
-              встречи и ожиданиями гостей.
-              <br />
-              <br />
-              Наша цель — не просто провести парение, а создать запоминающийся
-              опыт, наполненный теплом, вниманием, комфортом и ощущением
-              глубокого восстановления. Именно поэтому многие гости
-              возвращаются к нам снова и снова, доверяя самые важные встречи,
-              праздники и моменты отдыха.
-            </p>
+            <p className="eyebrow">Как мы работаем</p>
+            <div className="mt-10 max-w-2xl space-y-12 text-[#5b5044]">
+              <div>
+                <h2 className="font-display text-3xl font-normal leading-tight text-[#201b15]">
+                  Формат
+                </h2>
+                <div className="mt-6 space-y-5 text-lg leading-8">
+                  <p>
+                    Вам не нужно никуда ехать. Команда мастеров приезжает к вам
+                    и полностью организует банное пространство.
+                  </p>
+                  <p>
+                    При желании мы можем пригласить вас в баню наших партнёров
+                    или подобрать подходящую площадку под ваш запрос.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="font-display text-3xl font-normal leading-tight text-[#201b15]">
+                  Для кого
+                </h2>
+                <div className="mt-6 space-y-6 text-lg leading-8">
+                  <p>
+                    <span className="block text-[#201b15]">
+                      Семья и близкие
+                    </span>
+                    Тёплый день отдыха, семейный праздник или возможность
+                    провести время вместе без суеты.
+                  </p>
+                  <p>
+                    <span className="block text-[#201b15]">Друзья</span>
+                    Встречи, которые хочется запомнить. Настоящая баня,
+                    общение, парение и атмосфера отдыха.
+                  </p>
+                  <p>
+                    <span className="block text-[#201b15]">
+                      Деловые партнёры
+                    </span>
+                    Неформальное пространство для общения, укрепления отношений
+                    и проведения встреч в комфортной обстановке.
+                  </p>
+                  <p>
+                    <span className="block text-[#201b15]">
+                      Корпоративные команды
+                    </span>
+                    Восстановление после интенсивной работы, тимбилдинг и
+                    мероприятия для сотрудников.
+                  </p>
+                  <p>
+                    <span className="block text-[#201b15]">
+                      Частные ретриты
+                    </span>
+                    Перезагрузка, восстановление ресурсов, работа со стрессом и
+                    возвращение внутреннего баланса.
+                  </p>
+                  <p>
+                    <span className="block text-[#201b15]">Особые события</span>
+                    Дни рождения, юбилеи, семейные торжества и другие важные
+                    моменты, которые хочется провести по-настоящему красиво.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="font-display text-3xl font-normal leading-tight text-[#201b15]">
+                  Индивидуальный подход
+                </h2>
+                <p className="mt-6 text-lg leading-8">
+                  Каждая программа создаётся индивидуально. Мы подбираем команду
+                  мастеров, продолжительность, сценарий парения, массажные и
+                  SPA-практики исходя из ваших задач, пожеланий и формата
+                  встречи.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-display text-3xl font-normal leading-tight text-[#201b15]">
+                  Результат
+                </h2>
+                <p className="mt-6 text-lg leading-8">
+                  Наша цель — создать атмосферу тепла, внимания, комфорта и
+                  глубокого восстановления.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -196,14 +246,12 @@ export default function Home() {
                   восстановления, отдыха и общения. Каждая программа собирается
                   индивидуально и может включать различные элементы в
                   зависимости от формата встречи, количества гостей и
-                  поставленных задач.
+                  ваших пожеланий.
                 </p>
                 <p>
                   В программу могут входить авторское парение, массажные
                   практики, SPA-процедуры, ароматерапия, чайные церемонии и
-                  другие элементы банного ритуала. Состав программы всегда
-                  подбирается индивидуально под формат встречи, количество
-                  гостей и ваши пожелания.
+                  другие банные ритуалы.
                 </p>
               </div>
             </div>
