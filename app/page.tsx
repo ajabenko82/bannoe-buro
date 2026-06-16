@@ -63,8 +63,10 @@ const testimonials = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f6f0e7] text-[#201b15]">
-      <section className="relative min-h-[100svh] overflow-hidden">
+    <>
+      <MobileNav />
+      <main className="min-h-screen overflow-x-hidden bg-[#f6f0e7] text-[#201b15]">
+      <section className="hero relative min-h-[100svh] overflow-hidden">
         <Image
           src="/images/hero/master-with-venik.jpg"
           alt="Банный мастер с веником в парном пространстве"
@@ -73,9 +75,9 @@ export default function Home() {
           sizes="100vw"
           className="scale-[1.02] object-cover object-[center_25%]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(18,14,10,.88)_0%,rgba(18,14,10,.66)_42%,rgba(18,14,10,.34)_76%,rgba(18,14,10,.18)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_48%,rgba(246,240,231,.10),rgba(18,14,10,0)_36%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-52 bg-[linear-gradient(0deg,#f6f0e7,rgba(246,240,231,0))]" />
+        <div className="hero-overlay absolute inset-0 bg-[linear-gradient(90deg,rgba(18,14,10,.88)_0%,rgba(18,14,10,.66)_42%,rgba(18,14,10,.34)_76%,rgba(18,14,10,.18)_100%)]" />
+        <div className="hero-overlay absolute inset-0 bg-[radial-gradient(circle_at_28%_48%,rgba(246,240,231,.10),rgba(18,14,10,0)_36%)]" />
+        <div className="hero-overlay absolute inset-x-0 bottom-0 h-52 bg-[linear-gradient(0deg,#f6f0e7,rgba(246,240,231,0))]" />
 
         <header className="relative z-10 mx-auto flex w-full max-w-[1520px] items-center justify-between px-5 py-5 text-[#faf4ea] sm:px-10 sm:py-8 lg:px-20 lg:py-12">
           <a href="#top" className="text-xs uppercase">
@@ -95,7 +97,6 @@ export default function Home() {
               Контакты
             </a>
           </nav>
-          <MobileNav />
         </header>
 
         <div
@@ -230,7 +231,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="included" className="section-space px-6 sm:px-10 lg:px-20">
+      <section id="programs" className="section-space px-6 sm:px-10 lg:px-20">
         <div className="mx-auto max-w-[1320px]">
           <div className="grid gap-20 lg:grid-cols-[0.72fr_1.28fr]">
             <p className="eyebrow reveal">Что входит в наши программы</p>
@@ -341,7 +342,7 @@ export default function Home() {
       </section>
 
       <section
-        id="testimonials"
+        id="reviews"
         className="section-space px-6 sm:px-10 lg:px-20"
       >
         <div className="mx-auto max-w-[1320px]">
@@ -485,6 +486,7 @@ export default function Home() {
           Все права защищены.
         </p>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }

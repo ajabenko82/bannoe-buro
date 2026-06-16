@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 
 const mobileLinks = [
   { label: "Как мы работаем", href: "#how-we-work" },
-  { label: "Что входит в наши программы", href: "#included" },
+  { label: "Что входит в наши программы", href: "#programs" },
   { label: "Галерея", href: "#gallery" },
   { label: "Команда мастеров", href: "#team" },
-  { label: "Отзывы гостей", href: "#testimonials" },
+  { label: "Отзывы гостей", href: "#reviews" },
   { label: "Конфиденциальность", href: "#privacy" },
   { label: "Контакты", href: "#contacts" },
 ];
@@ -35,11 +35,13 @@ export default function MobileNav() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <div className="lg:hidden">
+    <div className="mobile-menu lg:hidden">
       <button
         type="button"
         onClick={toggleMenu}
-        className="relative z-[70] flex h-11 w-11 items-center justify-center border border-[#fbf6ee]/45 text-[#fbf6ee] transition hover:bg-[#fbf6ee]/10"
+        className={`fixed right-5 top-5 z-[1000001] h-11 w-11 items-center justify-center border border-[#fbf6ee]/45 text-[#fbf6ee] transition hover:bg-[#fbf6ee]/10 ${
+          isOpen ? "hidden" : "flex"
+        }`}
         aria-label={isOpen ? "Закрыть меню" : "Открыть меню"}
         aria-expanded={isOpen}
         aria-controls="mobile-navigation"
@@ -57,12 +59,12 @@ export default function MobileNav() {
       {isOpen ? (
         <div
           id="mobile-navigation"
-          className="fixed inset-0 z-[99999] h-[100dvh] w-[100vw] overflow-y-auto bg-[#17130f] text-[#fbf6ee]"
+          className="fixed inset-0 z-[999999] h-[100dvh] w-[100vw] overflow-y-auto bg-[#17130f] text-[#fbf6ee] pointer-events-auto"
         >
           <button
             type="button"
             onClick={closeMenu}
-            className="fixed right-6 top-6 z-[100000] flex h-11 w-11 items-center justify-center border border-[#fbf6ee]/35 text-[#fbf6ee] transition hover:bg-[#fbf6ee]/10"
+            className="fixed right-6 top-6 z-[1000001] flex h-11 w-11 items-center justify-center border border-[#fbf6ee]/35 text-[#fbf6ee] transition hover:bg-[#fbf6ee]/10 pointer-events-auto"
             aria-label="Закрыть меню"
           >
             <span className="relative block h-5 w-5">
@@ -71,7 +73,7 @@ export default function MobileNav() {
             </span>
           </button>
 
-          <nav className="flex min-h-full flex-col gap-6 px-8 pt-24 pb-10 leading-[1.1]">
+          <nav className="relative z-[1000000] flex min-h-full flex-col gap-6 px-8 pt-24 pb-10 leading-[1.1] pointer-events-auto">
             {mobileLinks.map((link) => (
               <a
                 key={link.href}

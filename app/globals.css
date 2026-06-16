@@ -39,6 +39,18 @@ body.menu-open .hero-content {
   visibility: hidden;
 }
 
+body.menu-open main,
+body.menu-open .hero,
+body.menu-open .hero-content,
+body.menu-open .hero-overlay {
+  pointer-events: none;
+}
+
+body.menu-open .mobile-menu,
+body.menu-open .mobile-menu * {
+  pointer-events: auto;
+}
+
 a {
   text-decoration: none;
 }
