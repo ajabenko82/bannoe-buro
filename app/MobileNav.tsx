@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const mobileLinks = [
   { label: "Как мы работаем", href: "#how-we-work" },
@@ -15,6 +15,19 @@ const mobileLinks = [
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (!isOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const toggleMenu = () => setIsOpen((current) => !current);
   const closeMenu = () => setIsOpen(false);
 
@@ -28,38 +41,40 @@ export default function MobileNav() {
         aria-expanded={isOpen}
         aria-controls="mobile-navigation"
       >
-        <span className="sr-only">{isOpen ? "Закрыть меню" : "Открыть меню"}</span>
+        <span className="sr-only">
+          {isOpen ? "Закрыть меню" : "Открыть меню"}
+        </span>
         <span className="relative block h-4 w-5">
-          <span
-            className={`absolute left-0 top-0 h-px w-5 bg-current transition duration-300 ${
-              isOpen ? "translate-y-2 rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`absolute left-0 top-2 h-px w-5 bg-current transition duration-300 ${
-              isOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`absolute left-0 top-4 h-px w-5 bg-current transition duration-300 ${
-              isOpen ? "-translate-y-2 -rotate-45" : ""
-            }`}
-          />
+          <span className="absolute left-0 top-0 h-px w-5 bg-current" />
+          <span className="absolute left-0 top-2 h-px w-5 bg-current" />
+          <span className="absolute left-0 top-4 h-px w-5 bg-current" />
         </span>
       </button>
 
       {isOpen ? (
         <div
           id="mobile-navigation"
-          className="fixed inset-0 z-[60] bg-[#211c16]/96 px-6 pt-28 pb-10 text-[#fbf6ee] backdrop-blur-sm"
+          className="fixed left-0 top-0 z-[9999] h-[100vh] w-full bg-[#17130f] text-[#fbf6ee]"
         >
-          <nav className="mx-auto flex max-w-md flex-col gap-5">
+          <button
+            type="button"
+            onClick={closeMenu}
+            className="absolute right-6 top-6 flex h-11 w-11 items-center justify-center border border-[#fbf6ee]/35 text-[#fbf6ee] transition hover:bg-[#fbf6ee]/10"
+            aria-label="Закрыть меню"
+          >
+            <span className="relative block h-5 w-5">
+              <span className="absolute left-0 top-1/2 h-px w-5 -translate-y-1/2 rotate-45 bg-current" />
+              <span className="absolute left-0 top-1/2 h-px w-5 -translate-y-1/2 -rotate-45 bg-current" />
+            </span>
+          </button>
+
+          <nav className="flex h-full flex-col gap-6 px-8 pt-24 pb-10">
             {mobileLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={closeMenu}
-                className="border-b border-[#fbf6ee]/14 pb-5 font-display text-3xl leading-tight transition hover:text-[#d8c7ae]"
+                className="font-display text-[clamp(1.85rem,8vw,3rem)] leading-[1.1] text-[#fbf6ee] transition hover:text-[#d8c7ae]"
               >
                 {link.label}
               </a>
